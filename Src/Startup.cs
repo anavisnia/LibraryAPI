@@ -1,4 +1,6 @@
 using LibraryAPI.Data;
+using LibraryAPI.Interfaces;
+using LibraryAPI.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -32,6 +34,7 @@ namespace LibraryAPI
             services.AddDbContext<DataContext>(d => d.UseSqlServer(connectionString));
             services.AddAutoMapper(typeof(Startup));
             services.AddControllers();
+            services.AddScoped<IAuthorRepository, AuthorRepository>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "LibraryAPI", Version = "v1" });
