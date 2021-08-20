@@ -35,6 +35,7 @@ namespace LibraryAPI
             services.AddAutoMapper(typeof(Startup));
             services.AddControllers();
             services.AddScoped<IAuthorRepository, AuthorRepository>();
+            services.AddScoped<IBookRepository, BookRepository>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "LibraryAPI", Version = "v1" });

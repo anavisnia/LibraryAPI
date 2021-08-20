@@ -11,6 +11,6 @@ namespace LibraryAPI.Dtos
     {
         public string Surname { get; set; }
 
-        public Book Book { get; set; }
+        public int BookId { get; set; }
     }
 }
