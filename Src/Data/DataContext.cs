@@ -24,6 +24,10 @@ namespace LibraryAPI.Data
             .HasMany(a => a.Books)
             .WithOne(b => b.Author)
             .HasForeignKey(ai => ai.AuthorId);
+
+            modelBuilder.Entity<Book>()
+            .HasOne(b => b.Author)
+            .WithMany(a => a.Books);
         }
     }
 }
