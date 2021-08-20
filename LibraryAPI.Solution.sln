@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31613.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{D6B4F9DA-578B-411B-B0DC-18AC9CD24BBE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryAPI", "Src\LibraryAPI.csproj", "{27346B36-D004-4739-9D97-8A6880D9DFFC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{026ADD98-D109-43AE-8BE8-A4F4A47D1A0A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryAPI.Test", "Test\LibraryAPI.Test.csproj", "{9D372CFD-C9C7-403A-9C7B-47B99275F667}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{27346B36-D004-4739-9D97-8A6880D9DFFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27346B36-D004-4739-9D97-8A6880D9DFFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27346B36-D004-4739-9D97-8A6880D9DFFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27346B36-D004-4739-9D97-8A6880D9DFFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D372CFD-C9C7-403A-9C7B-47B99275F667}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D372CFD-C9C7-403A-9C7B-47B99275F667}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D372CFD-C9C7-403A-9C7B-47B99275F667}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D372CFD-C9C7-403A-9C7B-47B99275F667}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{27346B36-D004-4739-9D97-8A6880D9DFFC} = {D6B4F9DA-578B-411B-B0DC-18AC9CD24BBE}
+		{9D372CFD-C9C7-403A-9C7B-47B99275F667} = {026ADD98-D109-43AE-8BE8-A4F4A47D1A0A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {56FDE824-A75C-47F2-9AE6-17E75EE48445}
+	EndGlobalSection
+EndGlobal
