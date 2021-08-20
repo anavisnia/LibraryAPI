@@ -1,7 +1,11 @@
+using LibraryAPI.Data;
+using LibraryAPI.Interfaces;
+using LibraryAPI.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -26,8 +30,12 @@ namespace LibraryAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            var connectionString = Configuration.GetConnectionString("DefaultConnection");
+            services.AddDbContext<DataContext>(d => d.UseSqlServer(connectionString));
+            services.AddAutoMapper(typeof(Startup));
             services.AddControllers();
+            services.AddScoped<IAuthorRepository, AuthorRepository>();
+            services.AddScoped<IBookRepository, BookRepository>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "LibraryAPI", Version = "v1" });
